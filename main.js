@@ -82,11 +82,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     renderTimeSlots();
 
-    // ---- Enroll Button ----
+    // ---- Enroll Button -> Success Page ----
     const enrollBtn = document.querySelector('.enroll-btn');
+
     enrollBtn.addEventListener('click', () => {
+        // Button press micro-interaction
         enrollBtn.style.transform = 'scale(0.96)';
         setTimeout(() => { enrollBtn.style.transform = ''; }, 150);
+
+        // Navigate to success page
+        window.location.href = 'success.html';
     });
 
     // ---- Input Focus ----
